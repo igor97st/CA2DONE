@@ -1,0 +1,912 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>CA2</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+   
+  <style>
+  body {
+      font: 400 15px Lato, sans-serif;
+      line-height: 1.8;
+      color: #818181;
+  }
+  h2 {
+      font-size: 24px;
+      text-transform: uppercase;
+      color: #303030;
+      font-weight: 600;
+      margin-bottom: 30px;
+  }
+  h4 {
+      font-size: 19px;
+      line-height: 1.375em;
+      color: #303030;
+      font-weight: 400;
+      margin-bottom: 30px;
+  }  
+  .jumbotron {
+      background-color: #73AD21;
+      color: #fff;
+      padding: 20%;
+	  
+	  
+      font-family: Montserrat, sans-serif;
+  }
+  .container-fluid {
+      padding: 60px 50px;
+  }
+  .bg-grey {
+      background-color: #f6f6f6;
+  }
+  
+  .item h4 {
+      font-size: 19px;
+      line-height: 1.375em;
+      font-weight: 400;
+      font-style: italic;
+      margin: 70px 0;
+  }
+  .item span {
+      font-style: normal;
+  }
+  .navbar {
+      margin-bottom: 0;
+      background-color: #73AD21;
+      z-index: 9999;
+      border: 0;
+      font-size: 12px !important;
+      line-height: 1.4 !important;
+      letter-spacing: 4px;
+      border-radius: 0;
+      font-family: Montserrat, sans-serif;
+  }
+  .navbar li a, .navbar .navbar-brand {
+      color: #fff !important;
+  }
+  .navbar-nav li a:hover, .navbar-nav li.active a {
+      color: #73AD21 !important;
+      background-color: #fff !important;
+  }
+  .navbar-default .navbar-toggle {
+      border-color: transparent;
+      color: #fff !important;
+  }
+  footer .glyphicon {
+      font-size: 20px;
+      margin-bottom: 20px;
+      color: #73AD21;
+  }
+  .slideanim {visibility:hidden;}
+  .slide {
+      animation-name: slide;
+      -webkit-animation-name: slide;
+      animation-duration: 1s;
+      -webkit-animation-duration: 1s;
+      visibility: visible;
+  }
+  @keyframes slide {
+    0% {
+      opacity: 0;
+      transform: translateY(70%);
+    } 
+    100% {
+      opacity: 1;
+      transform: translateY(0%);
+    }
+  }
+  @-webkit-keyframes slide {
+    0% {
+      opacity: 0;
+      -webkit-transform: translateY(70%);
+    } 
+    100% {
+      opacity: 1;
+      -webkit-transform: translateY(0%);
+    }
+  }
+  @media screen and (max-width: 768px) {
+    .col-sm-4 {
+      text-align: center;
+      margin: 25px 0;
+    }
+    .btn-lg {
+        width: 100%;
+        margin-bottom: 35px;
+    }
+  }
+  @media screen and (max-width: 480px) {
+    .logo {
+        font-size: 150px;
+    }	
+  }
+  
+  .panel > .panel-heading {
+    background-color: #73AD21;
+    color: white;
+	}
+	.nav-pills>li.active>a, .nav-pills>li.active>a:hover, .nav-pills>li.active>a:focus{
+	background-color:#73AD21;
+	color:white;
+	}
+	.nav-pills a{color:#73AD21;}
+	
+	.button-box {
+   text-align:center;
+   margin-top:20px;
+}
+.carousel-inner > .item > img{
+margin:auto;
+}
+
+  </style>
+</head>
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+
+
+<!--------NAVIGATION----------->
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="#myPage">Igors Strukovs</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#about">About me</a></li>
+		<li><a href="#skills">Skills</a></li>
+		<li><a href="#education">Education</a></li>
+        <li><a href="#grades">Grades</a></li>
+        <li><a href="#erasmus">Erasmus</a></li>
+		<li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact Me</a></li>
+		<li><a href="report.html">Report</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+</br>
+
+
+<!--------INTRO PAGE----------->
+<div class="jumbotron text-center"> 
+	<img src="me.jpg" class="img-circle" height="200" width="200">
+	<h2>Igors Strukovs</h2>
+		<div class="row">
+			<a href="CV.docx"><button class="btn btn-primary-outline" style="color: black; background-color: green">Download My CV</button></a>
+			<button class="btn btn-primary-outline" style="color: black; background-color: green" type="button" data-toggle="modal" data-target="#myModal2" >Contact Me</button>
+		</div>
+		
+				
+					
+</div>
+		
+
+<!--------ABOUT ME PAGE----------->
+<div id="about" class="container-fluid bg-grey">
+		 <div class="row">
+				<div class="col-sm-8">
+						<h2>About Me</h2>
+						<br>
+						<p>Final year Computer Science student - focused, fast learner, hard-working<p>
+						<p>Experienced in a wide range of areas from use of the Azure Cloud platform to Web Development.<p>
+						<p>Proficient in C# and Java, and experienced in many other languages<p>
+						<p>On Erasmus programme in Germany, led two multinational, multilingual teams of Masters students on projects involving distributed systems and security<p>
+						<p>Bilingual in English and Russian, proficient in German and Latvian<p>
+						<p>Passionately interested in exploring the almost limitless possibilities of software development<p>
+						<p>Currently working on the development of a multifunctional Bot app for mobile<p>
+						<p>Looking for experience in the IT sector that will help me grow as an individual and as a team player<p>
+				</div>
+							<div class="col-sm-4 text-center">
+								<img src="me.jpg" class="img-circle" style="margin-top:3em" height="300" width="300">	
+							</div>
+		 </div>
+</div>
+
+
+<!--------SKILLS PAGE----------->
+<div id="skills" class="container-fluid">
+		<div class="col-sm-8">
+				<h2>My skills</h2>
+				<br>
+								<div class="row">
+									<div class="col-sm-2">
+									  <p>C#</p>
+									</div>
+										<div class="col-sm-10">
+											<div class="progress">
+												<div class="progress-bar" role="progressbar" style="width:90%;background-color:#73AD21">
+													90%
+												</div>
+											</div>
+										</div>
+								</div>
+								<div class="row">
+									<div class="col-sm-2">
+									   <p>Java</p>
+									</div>
+										<div class="col-sm-10">
+											<div class="progress">
+												<div class="progress-bar" role="progressbar" style="width:100%;background-color:#73AD21">
+													100%
+												</div>
+											</div>
+										</div>
+								</div>
+								<div class="row">
+									<div class="col-sm-2">
+									   <p>C++</p>
+									</div>
+										<div class="col-sm-10">
+											<div class="progress">
+												<div class="progress-bar" role="progressbar" style="width:75%;background-color:#73AD21">
+													75%
+												</div>
+											</div>
+										</div>
+								</div>
+								<div class="row">
+									<div class="col-sm-2">
+									   <p>Html</p>
+									</div>
+										<div class="col-sm-10">
+											<div class="progress">
+												<div class="progress-bar" role="progressbar" style="width:60%;background-color:#73AD21">
+													60%
+												</div>
+											</div>
+										</div>
+								</div>
+								<div class="row">
+									<div class="col-sm-2">
+									   <p>css</p>
+									</div>
+										<div class="col-sm-10">
+											<div class="progress">
+												<div class="progress-bar" role="progressbar" style="width:60%;background-color:#73AD21">
+													60%
+												</div>
+											</div>
+										</div>
+								</div>
+								<div class="row">
+									<div class="col-sm-2">
+									   <p>Docker</p>
+									</div>
+										<div class="col-sm-10">
+											<div class="progress">
+												<div class="progress-bar" role="progressbar" style="width:85%;background-color:#73AD21">
+													85%
+												</div>
+											</div>
+										</div>
+								</div>
+								
+								<div class="row">
+					<button type="button" class="btn btn-outline pull-right" data-toggle="collapse" data-target="#img" style="background-color:#73AD21; color: white; margin-bottom: 1em">More skills</button>
+						</div>
+						
+						<div id="img" class="collapse">
+								
+								
+								
+								<div class="row">			
+									<div class="col-sm-2">
+									   <p>Azure</p>
+									</div>
+										<div class="col-sm-10">
+											<div class="progress">
+												<div class="progress-bar" role="progressbar" style="width:100%;background-color:#73AD21">
+													100%
+												</div>
+											</div>
+										</div>
+								</div>
+								
+								<div class="row">
+									<div class="col-sm-2">
+									   <p>SQL</p>
+									</div>
+										<div class="col-sm-10">
+											<div class="progress">
+												<div class="progress-bar" role="progressbar" style="width:53%;background-color:#73AD21">
+													53%
+												</div>
+											</div>
+										</div>
+								</div>
+								
+								<div class="row">
+									<div class="col-sm-2">
+									   <p>Java Script</p>
+									</div>
+										<div class="col-sm-10">
+											<div class="progress">
+												<div class="progress-bar" role="progressbar"  style="width:88%;background-color:#73AD21">
+													88%
+												</div>
+											</div>
+										</div>
+								</div>
+								
+								<div class="row">
+									<div class="col-sm-2">
+									   <p>Linux OS</p>
+									</div>
+										<div class="col-sm-10">
+											<div class="progress">
+												<div class="progress-bar" role="progressbar" style="width:45%;background-color:#73AD21">
+													45%
+												</div>
+											</div>
+										</div>
+								</div>
+								
+								<div class="row">
+									<div class="col-sm-2">
+									   <p>Cisco IOS</p>
+									</div>
+										<div class="col-sm-10">
+											<div class="progress">
+												<div class="progress-bar" role="progressbar"  style="width:60%;background-color:#73AD21">
+													60%
+												</div>
+											</div>
+										</div>
+								</div>
+								
+								<div class="row">
+									<div class="col-sm-2">
+									   <p>Xamarin</p>
+									</div>
+										<div class="col-sm-10">
+											<div class="progress">
+												<div class="progress-bar" role="progressbar"  style="width:50%;background-color:#73AD21">
+													50%
+												</div>
+											</div>
+										</div>
+								</div>
+								
+								<div class="row">
+									<div class="col-sm-2">
+									   <p>Windows</p>
+									</div>
+										<div class="col-sm-10">
+											<div class="progress">
+												<div class="progress-bar" role="progressbar"  style="width:100%;background-color:#73AD21">
+													100%
+												</div>
+											</div>
+										</div>
+								</div>
+								<div class="row">
+									<div class="col-sm-2">
+									   <p>Tableau</p>
+									</div>
+										<div class="col-sm-10">
+											<div class="progress">
+												<div class="progress-bar" role="progressbar"  style="width:40%;background-color:#73AD21">
+													40%
+												</div>
+											</div>
+										</div>
+								</div>
+					</div>
+   
+			</div>
+</div>
+
+<!--------EDUCATION PAGE----------->
+<div id="education" class="container-fluid bg-grey">
+  
+		<div class="col-sm-10">
+		<h2>Education</h2>
+		<br>
+						
+						<div class="row">			
+							<div class="col-sm-3">
+								<a href="https://www.it-tallaght.ie/index.cfm"><img src="itt.jpg" class="img-circle" height="150" width="150"></a>				
+							</div>
+								<div class="col-sm-8">
+									<p>Institute of Technology Tallaght Dublin</p>
+									<p>2015 - 2019</p>
+									<p>BSc in Computing</p>
+								</div>			
+						</div>
+						<hr>
+						<div class="row">			
+							<div class="col-sm-3">
+								<a href="https://www.uni-bamberg.de/en/"><img src="bam.jpg" class="img-circle" height="150" width="150"></a>				
+							</div>
+								<div class="col-sm-8">
+									<p>Otto Friedrich Universität Bamberg</p>
+									<p>2018</p>
+									<p>Erasmus</p>
+								</div>			
+						</div>
+						<hr>
+						<div class="row">			
+							<div class="col-sm-3">
+								<a href="https://www.education.ie/en/find-a-school/School-Detail/?roll=91332O"><img src="stm.jpg" class="img-circle" height="150" width="150"></a>			
+							</div>
+								<div class="col-sm-8">
+									<p>St.marks community school tallaght<p>
+									<p>2010 - 2015</p>
+									<p>Leaving cert</p>
+								</div>			
+						</div>
+						<hr>
+						<div class="row">			
+							<div class="col-sm-3">
+								<a href="http://klasika.edu.lv/en/"><img src="klas.jpg" class="img-circle" height="150" width="150"></a>				
+							</div>
+								<div class="col-sm-8">
+									<p>Klasika Private School<p>
+									<p>2004 - 2010</p>
+									<p>Primary School, Latvia</p>
+								</div>			
+						</div>
+			</div>
+  
+</div>
+
+<!--------GRADES PAGE----------->
+<div id="grades" class="container-fluid">
+	<h2>Grades</h2>
+	<div class="col-sm-2">
+	</div>
+	<div class="col-sm-8">
+		<div class="row slideanim">
+			<ul class="nav nav-pills" >
+					<li class="active"><a  href="#1a" data-toggle="tab">Fourth Year</a></li>
+					<li><a  href="#2a" data-toggle="tab">Third Year</a></li>
+					<li><a  href="#3a" data-toggle="tab">Second Year</a></li>
+					<li><a  href="#4a" data-toggle="tab">First Year</a></li>
+			</ul>
+					<div class="tab-content clearfix">
+						<div class="tab-pane active" id="1a">
+						<table class="table">
+							<thead>
+							  <tr>
+								<th>Subject</th>
+								<th>Grade</th>
+							  </tr>
+							</thead>
+							<tbody>
+							  <tr>
+								<td>Interactive Media Design & Visualisation</td>
+								<td>TBA</td>
+							  </tr>
+							  <tr>
+								<td>Applied Machine Learning</td>
+								<td>TBA</td>
+							  </tr>
+							  <tr>
+								<td>Information Management</td>
+								<td>TBA</td>
+							  </tr>
+							  <tr>
+								<td>Enterprise Applications Development</td>
+								<td>TBA</td>
+							  </tr>
+							  <tr>
+								<td>4th Year Project</td>
+								<td>TBA</td>
+							  </tr>
+							  <tr>
+								<td>Enterprise Performance Architecture</td>
+								<td>TBA</td>
+							  </tr>
+							</tbody>
+						  </table>		  
+						</div>
+					
+					<div class="tab-pane" id="2a">
+						 <table class="table">
+							<thead>
+							  <tr>
+								<th>Subject</th>
+								<th>Grade</th>
+							  </tr>
+							</thead>
+							<tbody>
+							  <tr>
+								<td>Data Structures & Algorithms; </td>
+								<td>C</td>
+							  </tr>
+							  <tr>
+								<td>Cloud Services and distributed Computing</td>
+								<td>B</td>
+							  </tr>
+							  <tr>
+								<td>Data Analysis</td>
+								<td>B</td>
+							  </tr>
+							  <tr>
+								<td>Operating Systems</td>
+								<td>B</td>
+							  </tr>
+							  <tr>
+								<td>Web Application Development</td>
+								<td>C</td>
+							  </tr>
+							  <tr>
+								<td>Advanced Databases</td>
+								<td>B</td>
+							  </tr>
+							</tbody>
+						  </table>
+					</div>
+					
+					<div class="tab-pane" id="3a">
+						 <table class="table">
+							<thead>
+							  <tr>
+								<th>Subject</th>
+								<th>Grade</th>
+							  </tr>
+							</thead>
+							<tbody>
+							  <tr>
+								<td>Web Design and Development</td>
+								<td>C</td>
+							  </tr>
+							  <tr>
+								<td>Management Science</td>
+								<td>B</td>
+							  </tr>
+							  <tr>
+								<td>Information Security</td>
+								<td>B</td>
+							  </tr>
+							  <tr>
+								<td>Software Dewelopment4</td>
+								<td>B</td>
+							  </tr>
+							  <tr>
+								<td>Database Design & Programming</td>
+								<td>C</td>
+							  </tr>
+							  <tr>
+								<td>Discrete Mathematics</td>
+								<td>A</td>
+							  </tr>
+							</tbody>
+						  </table>
+					</div>
+					
+					<div class="tab-pane" id="4a">
+						 <table class="table">
+							<thead>
+							  <tr>
+								<th>Subject</th>
+								<th>Grade</th>
+							  </tr>
+							</thead>
+							<tbody>
+							  <tr>
+								<td>Social media Communications</td>
+								<td>B</td>
+							  </tr>
+							  <tr>
+								<td>Information</td>
+								<td>B</td>
+							  </tr>
+							  <tr>
+								<td>Operating Systems</td>
+								<td>B</td>
+							  </tr>
+							  <tr>
+								<td>Statistics</td>
+								<td>A</td>
+							  </tr>
+							  <tr>
+								<td>Software Development</td>
+								<td>A</td>
+							  </tr>
+							  <tr>
+								<td>Discrete Mathematics</td>
+								<td>A</td>
+							  </tr>
+							</tbody>
+						  </table>
+						</div>
+					</div> 
+		</div>
+	</div>
+	<div class="col-sm-2">
+	</div>
+</div>
+
+<!--------ERASMUS PAGE----------->
+<div id="erasmus" class="container-fluid text-center bg-grey">
+		  <h2>Erasmus</h2>
+		  
+		  <div class="row text-center slideanim">
+				  <div class="col-sm-2">
+				  </div>
+					<div class="col-sm-8">
+					  <p>During my 6 months on the Erasmus programme in Otto Friedrich Universität Bamberg, Germany I worked on three projects and was asked to lead two of them.  Leading a multilingual team of students from a number of different countries presented me with very valuable opportunities to develop my communication and organisational skills. It was challenging at times but rewarding.</p>	
+					</div>
+					<div class="col-sm-2">
+					</div>			
+		  </div>
+		  <div class="col-sm-1">
+				  </div>
+				  <div class="col-sm-10">
+		  <div class="row">
+				  <div id="myCarousel" class="carousel slide" data-ride="carousel">
+				  <!-- Indicators -->
+				  <ol class="carousel-indicators">
+					<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+					<li data-target="#myCarousel" data-slide-to="1"></li>
+					<li data-target="#myCarousel" data-slide-to="2"></li>
+				  </ol>
+
+				  <!-- Wrapper for slides -->
+				  <div class="carousel-inner">
+					<div class="item active">
+					  <img src="eras.jpg" alt="Erasmus">
+					</div>
+
+					<div class="item">
+					  <img src="2.jpg" alt="College">
+					</div>
+
+					<div class="item">
+					  <img src="bild.jpg" alt="Building">
+					</div>
+				  </div>
+
+				  <!-- Left and right controls -->
+				  <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+					<span class="glyphicon glyphicon-chevron-left"></span>
+					<span class="sr-only">Previous</span>
+				  </a>
+				  <a class="right carousel-control" href="#myCarousel" data-slide="next">
+					<span class="glyphicon glyphicon-chevron-right"></span>
+					<span class="sr-only">Next</span>
+				  </a>
+				</div>
+		</div>
+		</div>
+						<div class="col-sm-1">
+						</div>
+</div>
+
+<!-- PROJECTS PAGE -->
+<div id="projects" class="container-fluid">
+	  <div class="text-center">
+		<h2>Projects</h2>
+		<h4>List of projects done in College</h4>
+	  </div>
+	  <div class="panel-group slideanim" id="accordion">
+		<div class="panel panel-default" >
+		  <div class="panel-heading">
+			<h4 class="panel-title">
+			  <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">YEAR 4</a>
+			</h4>
+		  </div>
+		  <div id="collapse1" class="panel-collapse collapse in" >
+				<div class="panel-body">
+				<div class="panel-body">
+				 <div class="row">
+					<div class="col-sm-5">
+				<img src="c.jpg" class="img-circle" height="200" width="200">
+					</div>
+				<p>Mobile app that can search movies to watch.</p> 
+				<p>Built using Xamarin and Azure cloud services</p>
+				<p>Involves a Bot that understands human speach</p>
+				<p>Language used C#</p>
+				
+				</div>
+				
+				</div>
+				</div>
+		  </div>
+		</div>
+		<div class="panel panel-default">
+		  <div class="panel-heading">
+			<h4 class="panel-title">
+			  <a data-toggle="collapse" data-parent="#accordion" href="#collapse2">YEAR 3</a>
+			</h4>
+		  </div>
+		  <div id="collapse2" class="panel-collapse collapse">
+					<div class="panel-body">
+					<div class="panel-body">
+						 <div class="row">
+						 <div class="col-sm-5">
+					<img src="web.jpg" class="img-circle" height="200" width="200">
+						</div>
+					<p>Website to sell products and show information about them<p>
+					<p>Used HTML, CSS, Java Script to make</p>
+					<p>Done in group of 5 people</p>
+					</div>
+					
+					
+					</div>
+				  </div>
+		</div>
+		<div class="panel panel-default">
+		  <div class="panel-heading">
+			<h4 class="panel-title">
+			  <a data-toggle="collapse" data-parent="#accordion" href="#collapse3">YEAR 2</a>
+			</h4>
+		  </div>
+		  <div id="collapse3" class="panel-collapse collapse">
+			<div class="panel-body">
+				<div class="panel-body">
+					 <div class="row">
+					 <div class="col-sm-5">
+				<img src="htm.jpg" class="img-circle" height="200" width="200">
+					</div>
+				
+				<p>Website to show videos and information</p>
+				<p>Used HTML</p>
+				<p>Done in group of 2 people</p>
+				</div>
+				</div>
+		</div>
+		</div>
+		<div class="panel panel-default">
+		  <div class="panel-heading">
+			<h4 class="panel-title">
+			  <a data-toggle="collapse" data-parent="#accordion" href="#collapse4">YEAR 1</a>
+			</h4>
+		  </div>
+		  <div id="collapse4" class="panel-collapse collapse">
+			<div class="panel-body">
+			<div class="row">
+			<div class="col-sm-5">
+			<img src="jav.jpg" class="img-circle" height="200" width="200">
+			</div>
+			<p>Java software to calculate the tax</p>
+			<p>Used Java Language</p>
+			<p>Done in group of 2 people</p>
+			</div>
+			</div>
+		  </div>
+		</div>
+	  </div> 
+</div>
+</div>
+</div>
+<!------------- CONTACT PAGE----------->
+<div id="contact" class="container-fluid bg-grey">
+		  <h2>CONTACT</h2>
+		  <div class="row">
+			<div class="col-sm-2">
+			  <p><span class="glyphicon glyphicon-map-marker"></span>Ireland Dublin Tallaght</p>
+			  <p><span class="glyphicon glyphicon-phone"></span> 0876004308</p>
+			  <p><span class="glyphicon glyphicon-envelope"></span> igor97st@gmail.com</p>
+			  <a href="www.linkedin.com/in/igors-strukovs-5a2446115" style="margin-bottom: 1em">
+				<i class="fab fa-linkedin"></i>
+				</a>
+			  <a href="CV.docx">
+			<button class="btn" style="background-color:#73AD21; color: white; margin-bottom: 1em">Download My CV</button>
+			</a>
+			</div>
+			
+			
+					<div class="col-sm-5">
+					<div class="embed-responsive embed-responsive-16by9">
+					<iframe class="embed-responsive-item" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2385.010331045896!2d-6.368068683885952!3d53.289349979967255!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNTPCsDE3JzIxLjciTiA2wrAyMSc1Ny4yIlc!5e0!3m2!1sen!2sie!4v1544796482246"  frameborder="0" style="border:0" allowfullscreen></iframe>
+					</div>
+					</div>
+					
+			<div class="col-sm-4">
+				  <div class="row">
+					<div class="col-sm-6 form-group">
+					  <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
+					</div>
+					<div class="col-sm-6 form-group">
+					  <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
+					</div>
+				  </div>
+				  <textarea class="form-control" id="comments" name="comments" placeholder="Comment" rows="5"></textarea><br>
+				  <div class="row">
+					<div class="col-sm-12 form-group">
+					  <button class="btn btn pull-right" type="button" data-toggle="modal" data-target="#myModal" style="background-color:#73AD21; color: white; margin-bottom: 1em">Send</button>
+					  
+						<div class="modal fade" id="myModal" role="dialog">
+				<div class="modal-dialog">
+				
+				  <br/><br/><br/><br/><br/><br/><br/><br/><br/>
+				  <div class="modal-content">
+					<div class="modal-header">
+					  <button type="button" class="close" data-dismiss="modal"></button>
+					  <h4 class="modal-title">Success</h4>
+					</div>
+					<div class="modal-body">
+					  <p>You have send a message!</p>
+					</div>
+					<div class="modal-footer">
+					  <button type="button" class="btn btn-default" style="background-color:#73AD21; color: white; margin-bottom: 1em" data-dismiss="modal">Close</button>
+					</div>
+				  </div>
+				  
+				</div>
+					</div>
+				  </div>
+				</div>
+		  </div>
+		</div>
+</div>
+<!------------CONTACT ME POPUP------------>
+	<div class="col-sm-12 form-group">
+					  <div class="modal fade" id="myModal2" role="dialog">
+				<div class="modal-dialog">
+				  <br/><br/><br/><br/><br/><br/><br/><br/><br/>
+				  <div class="modal-content">
+					<div class="modal-header">
+					  <button type="button" class="close" data-dismiss="modal2"></button>
+					  <h4 class="modal-title">Contact Information</h4>
+					</div>
+					<div class="modal-body">
+					  <div class="col-sm-6 form-group">
+					  <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
+					</div>
+					<div class="col-sm-6 form-group">
+					  <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
+					</div>
+				  </div>
+				  <textarea class="form-control" id="comments" name="comments" placeholder="Comment" rows="5"></textarea>
+					</div>
+					<div class="modal-footer">
+					  <button class="btn btn pull-right" type="button" data-dismiss="modal" style="background-color:#73AD21; color: white; margin-bottom: 1em">Send</button>
+					  
+					</div>
+				  </div>
+				  
+				</div>
+					</div>	
+<br/><br/><br/><br/><br/>
+
+<script>
+$(document).ready(function(){
+  
+  $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
+  
+    if (this.hash !== "") {
+      event.preventDefault();
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 700, function(){
+   
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    }
+  });
+  
+  $(window).scroll(function() {
+    $(".slideanim").each(function(){
+      var pos = $(this).offset().top;
+
+      var winTop = $(window).scrollTop();
+        if (pos < winTop + 600) {
+          $(this).addClass("slide");
+        }
+    });
+  });
+})
+</script>
+
+</body>
+</html>
